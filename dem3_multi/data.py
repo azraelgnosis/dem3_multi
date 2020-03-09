@@ -30,10 +30,6 @@ xml = re.sub(r"<(\d{1,2}(?:_hist)?>)(.*)</(\d{1,2}(?:_hist)?>)", r"<_\1\2</_\3",
 
 root = ET.fromstring(xml)
 
-for child in root:
-    print(child.tag)
-
-
 print("done")
 
 
