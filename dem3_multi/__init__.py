@@ -18,5 +18,8 @@ def create_app():
     from . import auth
     app.register_blueprint(auth.bp)
 
+    from . import dem3
+    app.register_blueprint(dem3.bp)
+
     return app
 
