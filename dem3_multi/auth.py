@@ -9,10 +9,12 @@ def register():
     if request.method == 'POST':
         pass
 
-    return render_template('auth/register.html')
+    return render_template('auth.html') # return render_template('auth/register.html')
 
 @bp.route('/login/', methods=('GET', 'POST'))
 def login():
-    return render_template('auth/login.html')
+    if request.method == 'POST':
+        pass
+    return render_template('auth.html') # return render_template('auth/login.html')
 
 def logout(): ...
