@@ -8,13 +8,15 @@ bp = Blueprint('auth', __name__, url_prefix='/auth')
 
 @bp.route('/register/', methods=('GET', 'POST'))
 def register():
+    if request.method == 'POST':
+        username = request.form['username'].lower()
+        password = request.form['password']
+
+        
+
     usernames = get_usernames()
 
-    if request.method == 'POST':
-        username = request.form['username']
-        password = request.form['password']        
-
-    return render_template('auth.html', usernames=usernames)
+    return render_template('auth/register.html', usernames=usernames)
 
 def username_exists(username:str) -> bool:
     db = get_db()
@@ -30,6 +32,6 @@ def username_exists(username:str) -> bool:
 def login():
     if request.method == 'POST':
         pass
-    return render_template('auth.html') # return render_template('auth/login.html')
+    return render_template('auth/login.html') # return render_template('auth/login.html')
 
 def logout(): ...
