@@ -11,11 +11,13 @@
                             <table class="table">
                                 <tr>
                                     <label for="username">Username</label>
-                                    <input class="form-control" type="text" name="username" required/>
+                                    <input class="form-control" type="text" id="username" name="username" required/>
+                                    <p id="error-registration-username"></p>
                                 </tr>
                                 <label for="password">Password</label>
                                 <input class="form-control" type="password" id="password" name="password" required/>
                                 <input class="form-control" type="password" id="password-check" name="password-check" required/>
+                                <p id="error-registration-password"></p>
                                 <input class="btn btn-primary" type="submit" value="Register" />
                             </table>
                         </form>
@@ -31,6 +33,7 @@
                                 <tr>
                                     <label for="username">Username</label>
                                     <input class="form-control" type="text" name="username" required/>
+                                    <p id="error-username-login"></p>
                                 </tr>
                                 <label for="password">Password</label>
                                 <input class="form-control" type="password" name="password" required/>
@@ -46,4 +49,7 @@
 
 {% block scripts %}
     <script src="{{ url_for('static', filename='scripts/auth.js') }}"></script>
+    <script>
+        let usernames = {{ usernames }};
+    </script>
 {% endblock scripts %}

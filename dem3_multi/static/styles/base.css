@@ -1,3 +1,7 @@
 nav {
     background-color: skyblue;
 }
+
+[id*='error'] {
+    color: red;
+}
