@@ -9,22 +9,22 @@ CREATE TABLE players (
     password TEXT NOT NULL
 );
 
-CREATE TABLE characters (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
-    game INTEGER NOT NULL
-    FOREIGN KEY (game) REFERENCES games (id)
-)
-
 CREATE TABLE games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     country TEXT NOT NULL
 );
 
-CREATE TABLE map_users_games (
+CREATE TABLE characters (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    user INTEGER NOT NULL,
-    game INTEGER NOT NULL,
-    FOREIGN KEY (user) REFERENCES users (id),
-    FOREIGN KEY (game) REFERENCES games (id)
+    name TEXT NOT NULL,
+    game_id INTEGER NOT NULL,
+    FOREIGN KEY (game_id) REFERENCES games (id)
+);
+
+CREATE TABLE map_players_games (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    player_id INTEGER NOT NULL,
+    game_id INTEGER NOT NULL,
+    FOREIGN KEY (player_id) REFERENCES players (id),
+    FOREIGN KEY (game_id) REFERENCES games (id)
 );
