@@ -16,6 +16,20 @@ def get_db() -> sqlite3.Connection:
 
     return g.db
 
+def close_db(e=None): 
+    if db := g.pop('db', None):
+        db.close()
+
+def get_usernames() -> list:
+    ":return: list of usernames"
+    db = get_db()
+
+    sql_select_usernames = "SELECT players.username FROM players"
+
+    usernames = db.execute(sql_select_usernames)
+    usernames = [row.username for row in usernames]
+
+    return usernames
 
 save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
 save_filename = "test1.xml"
@@ -34,15 +48,6 @@ print("done")
 
 
 
-
-
-
-
-def close_db(e=None):
-    db = g.pop('db', None)
-
-    if db is not None:
-        db.close()
 
 def init_db():
     db = get_db()
