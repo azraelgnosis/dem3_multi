@@ -25,6 +25,6 @@
 {% block scripts %}
     <script src="{{ url_for('static', filename='scripts/auth.js') }}"></script>
     <script>
-        let usernames = {{ usernames }};
+        let usernames = {{ usernames|safe }};
     </script>
 {% endblock scripts %}

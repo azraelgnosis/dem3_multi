@@ -6,27 +6,30 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
+from dem3_multi.models import Row
+
 def get_db() -> sqlite3.Connection:
     if 'db' not in g:
         g.db = sqlite3.connect(
             current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
         )
-        g.db.row_factory = sqlite3.Row
+        g.db.row_factory = Row # sqlite3.Row
 
     return g.db
 
-def close_db(e=None): 
-    if db := g.pop('db', None):
-        db.close()
+def get_players() -> list:
+    ":return"
 
 def get_usernames() -> list:
-    ":return: list of usernames"
+    """
+    Select usernames from players table and return as a list
+    """
     db = get_db()
 
-    sql_select_usernames = "SELECT players.username FROM players"
+    query = "SELECT players.username FROM players"
 
-    usernames = db.execute(sql_select_usernames)
+    usernames = db.execute(query).fetchall()
     usernames = [row.username for row in usernames]
 
     return usernames
@@ -48,6 +51,9 @@ print("done")
 
 
 
+def close_db(e=None): 
+    if db := g.pop('db', None):
+        db.close()
 
 def init_db():
     db = get_db()
