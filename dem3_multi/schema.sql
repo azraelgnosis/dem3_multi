@@ -1,9 +1,9 @@
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS players;
 DROP TABLE IF EXISTS games;
+DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS map_users_games;
 
-CREATE TABLE players (
+CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
     password TEXT NOT NULL
@@ -21,10 +21,10 @@ CREATE TABLE characters (
     FOREIGN KEY (game_id) REFERENCES games (id)
 );
 
-CREATE TABLE map_players_games (
+CREATE TABLE map_users_games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    player_id INTEGER NOT NULL,
+    user_id INTEGER NOT NULL,
     game_id INTEGER NOT NULL,
-    FOREIGN KEY (player_id) REFERENCES players (id),
+    FOREIGN KEY (user_id) REFERENCES users (id),
     FOREIGN KEY (game_id) REFERENCES games (id)
 );
