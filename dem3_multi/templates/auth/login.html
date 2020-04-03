@@ -1,26 +1,31 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header"><h2>Login</h2></div>
-            <div class="card-body">
-                <form action="{{ url_for('auth.login') }}" method="POST">
-                    <table class="table">
-                        <tr>
-                            <label for="username">Username</label>
-                            <input class="form-control" type="text" name="username" required/>
-                            <p id="error-username-login"></p>
-                        </tr>
-                        <label for="password">Password</label>
-                        <input class="form-control" type="password" name="password" required/>
-                        <input class="btn btn-primary" type="submit" value="Login" disabled/>
-                    </table>
-                </form>
+
+<div class="container">
+    <div class="row">
+        {% block content %}
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h2>Login</h2></div>
+                    <div class="card-body">
+                        <form action="{{ url_for('auth.login') }}" method="POST">
+                            <table class="table">
+                                <tr>
+                                    <label for="username">Username</label>
+                                    <input class="form-control" type="text" id="login-username" name="username" required/>
+                                    <p id="error-username-login"></p>
+                                </tr>
+                                <label for="password">Password</label>
+                                <input class="form-control" type="password" id="login-password" name="password" required/>
+                                <input class="btn btn-primary" type="submit" value="Login" id="login" disabled/>
+                            </table>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% endblock content %}
     </div>
-{% endblock content %}
+</div>
 
 {% block scripts %}
     <script src="{{ url_for('static', filename='scripts/auth.js') }}"></script>

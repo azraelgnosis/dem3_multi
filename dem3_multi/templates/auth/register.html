@@ -1,29 +1,33 @@
 {% extends 'base.html' %}
 
-{% block content %}
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-header"><h2>Register</h2></div>
-            <div class="card-body">
-                <form action="{{ url_for('auth.register') }}" method="POST">
-                    <table class="table">
-                        <tr>
-                            <label for="username">Username</label>
-                            <input class="form-control" type="text" id="username" name="username" required/>
-                            <p id="error-registration-username"></p>
-                        </tr>
-                        <label for="password">Password</label>
-                        <p style="color: red;">In development by an amateur. Please don't actually use a real password.</p>
-                        <input class="form-control" type="password" id="password" name="password" required/>
-                        <input class="form-control" type="password" id="password-check" name="password-check" required/>
-                        <p id="error-registration-password"></p>
-                        <input class="btn btn-primary" type="submit" value="Register" id="register" disabled/>
-                    </table>
-                </form>
+<div class="container">
+    <div class="row">
+        {% block content %}
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header"><h2>Register</h2></div>
+                    <div class="card-body">
+                        <form action="{{ url_for('auth.register') }}" method="POST">
+                            <table class="table">
+                                <tr>
+                                    <label for="username">Username</label>
+                                    <input class="form-control" type="text" id="register-username" name="username" required/>
+                                    <p id="error-registration-username"></p>
+                                </tr>
+                                <label for="password">Password</label>
+                                <p style="color: red;">In development by an amateur. Please don't actually use a real password.</p>
+                                <input class="form-control" type="password" id="register-password" name="password" required/>
+                                <input class="form-control" type="password" id="register-password-check" name="password-check" required/>
+                                <p id="error-registration-password"></p>
+                                <input class="btn btn-primary" type="submit" value="Register" id="register" disabled/>
+                            </table>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
+        {% endblock content %}
     </div>
-{% endblock content %}
+</div>
 
 {% block scripts %}
     <script src="{{ url_for('static', filename='scripts/auth.js') }}"></script>
