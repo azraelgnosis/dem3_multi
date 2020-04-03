@@ -7,7 +7,7 @@
         {% block head %}{% endblock head %}
     </head>
     <body>
-        {% include 'nav.html' %}
+        {% include '_nav.html' %}
     
         {% for message in get_flashed_messages() %}
             <div class="flash">{{ message }}</div>

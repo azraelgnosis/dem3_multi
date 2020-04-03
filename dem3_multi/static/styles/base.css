@@ -1,7 +1,7 @@
 nav {
-    background-color: skyblue;
+    background-color: dodgerblue;
 }
 
-[id*='error'] {
+[id*='error'], .flash {
     color: red;
 }
