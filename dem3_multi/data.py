@@ -6,7 +6,7 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-from dem3_multi.models import Row
+from dem3_multi.models import Row, User
 
 def get_db() -> sqlite3.Connection:
     if 'db' not in g:
@@ -18,21 +18,57 @@ def get_db() -> sqlite3.Connection:
 
     return g.db
 
-def get_players() -> list:
-    ":return"
+#! Do I actually need this?
+def get_users() -> list:
+    """
+    Select users from database.
+    """
+
+    db = get_db()
+    query = "SELECT * FROM users"
+    users = db.execute(query).fetchall()
+    users = [User.from_row(user) for user in users]
+
+    return users
+
+def get_user(username:str) -> User:
+    """
+    Retrieve user from database if present.
+    """
+
+    db = get_db()
+    query = "SELECT * FROM users WHERE username = ?"
+    user = db.execute(query, (username,)).fetchone()
+
+    try:
+        user = User(user.id, user.username, user.password)
+    except AttributeError:
+        user = None
+
+    return user
 
 def get_usernames() -> list:
     """
-    Select usernames from players table and return as a list
+    Select usernames from `users` table and return as a list
     """
     db = get_db()
 
-    query = "SELECT players.username FROM players"
+    query = "SELECT users.username FROM users"
 
     usernames = db.execute(query).fetchall()
     usernames = [row.username for row in usernames]
 
     return usernames
+
+def add_user(username:str, password:str) -> None:
+    """
+    Insert username and password into `users` table
+    """
+    db = get_db()
+
+    query = "INSERT INTO users (username, password) VALUES (?, ?)"
+    db.execute(query, (username, password))
+    db.commit()
 
 save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
 save_filename = "test1.xml"
