@@ -10,13 +10,16 @@ from dem3_multi.models import (
     Game, Row, User
 )
 
+from dem3_multi.game_models import Policy
+
+
 def get_db() -> sqlite3.Connection:
     if 'db' not in g:
         g.db = sqlite3.connect(
             current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
         )
-        g.db.row_factory = Row # sqlite3.Row
+        g.db.row_factory = Row
 
     return g.db
 
@@ -92,25 +95,36 @@ def get_game(id:int) -> Game:
     game = Game.from_row(game)
     return game
 
-def load_save_file(filename:str):
+#TODO
+def load_save_file(filename:str="test3.xml") -> ET.Element:
     """
     """
 
-    save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
-    filename = "test1.xml"
+    if 'save' not in g:
+        save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
 
-    with open(os.path.join(save_path, filename), "r") as f:
-        xml = f.read()
+        with open(os.path.join(save_path, filename), "r") as f:
+            xml = f.read()
 
-    xml = "<xml>\n" + xml # add opening <xml> tag to complement end tag
+        xml = "<xml>\n" + xml # add opening <xml> tag to complement end tag
 
-    # replaces <0>...</0> with <_0>...</_0> and <0_hist>...</0_hist> with <_0_hist>...</_0_hist>
-    xml = re.sub(r"<(\d{1,2}(?:_hist)?>)(.*)</(\d{1,2}(?:_hist)?>)", r"<_\1\2</_\3", xml)
+        # replaces <0>...</0> with <_0>...</_0> and <0_hist>...</0_hist> with <_0_hist>...</_0_hist>
+        xml = re.sub(r"<(\d{1,2}(?:_hist)?>)(.*)</(\d{1,2}(?:_hist)?>)", r"<_\1\2</_\3", xml)
 
-    root = ET.fromstring(xml)
+        root = ET.fromstring(xml)
 
-    print("done")
+        g.save = root
+    
+    return g.save
 
+
+def get_policies():
+    game = load_save_file()
+
+    policies = game.find(".//policies")
+    policies = [Policy.from_xml(policy) for policy in policies.iter('policy')]
+
+    return policies
 
 
 
