@@ -17,7 +17,7 @@ def dashboard():
 @bp.route('/games')
 def games():
     games = get_games()
-    return render_template('games.html', games= games)
+    return render_template('games.html', games=games)
 
 @bp.route('/games/<int:id>')
 def game(id:int):

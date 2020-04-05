@@ -81,7 +81,7 @@ def get_games() -> list:
     db = get_db()
     query = "SELECT * FROM games"
     games = db.execute(query).fetchall()
-    games = [Game.from_row(game) for game in games]
+    games = [Game.from_row(game) for game in games if game]
 
     return games
 
