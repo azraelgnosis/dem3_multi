@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{ game.name }}
+    {{ game.country }}
+    <img src="{{ url_for('static', filename='images/flags/' + game.country + '.png') }}" />
+{% endblock content %}

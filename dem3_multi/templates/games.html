@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/games.css') }}" />
+{% endblock head %}
+
+{% block content %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for game in games %}
+                <td><a href="{{ url_for('dem3.game', id=game.id) }}">{{ game.name }}</a></td>
+                <td><img class="flag" src="{{ url_for('static', filename='images/flags/' + game.country + '.png') }}" /></td>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock content %}}

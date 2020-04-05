@@ -12,12 +12,18 @@ class Row(sqlite3.Row):
     def __repr__(self): return ", ".join([f"{key}: {self[key]}" for key in self.keys()])
 
 class Model:
+    def init(self): ...
+
     @classmethod
     def from_row(cls, row:Row):
         new_obj = cls()
 
         for key in row.keys():
             setattr(new_obj, key, row[key]) #? Do Row objects have __getitem__?
+        
+        new_obj.init()
+
+        return new_obj
 
 class User(Model):
     __slots__ = ["id", "username", "password", "games"]
@@ -38,4 +44,10 @@ class Character:
     __slots__ = ["name", "game"]
 
 class Game(Model):
-    __slots__ = ["name", "users"]
+    __slots__ = ["name", "country", "users"]
+
+    def init(self): ...
+
+
+class Save(Model):
+    __slots__ = ["date"]

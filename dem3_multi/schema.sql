@@ -11,6 +11,7 @@ CREATE TABLE users (
 
 CREATE TABLE games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
     country TEXT NOT NULL
 );
 

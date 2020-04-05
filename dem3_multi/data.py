@@ -6,7 +6,9 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-from dem3_multi.models import Row, User
+from dem3_multi.models import (
+    Game, Row, User
+)
 
 def get_db() -> sqlite3.Connection:
     if 'db' not in g:
@@ -70,20 +72,47 @@ def add_user(username:str, password:str) -> None:
     db.execute(query, (username, password))
     db.commit()
 
-save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
-save_filename = "test1.xml"
+def get_games() -> list:
+    """
+    """
+    db = get_db()
+    query = "SELECT * FROM games"
+    games = db.execute(query).fetchall()
+    games = [Game.from_row(game) for game in games]
 
-with open(os.path.join(save_path, save_filename)) as f:
-    xml = f.read()
+    return games
 
-xml = "<xml>\n" + xml # add opening <xml> tag to complement end tag
+def get_game(id:int) -> Game:
+    """
+    Return Game based on id
+    """
+    db = get_db()
+    query = "SELECT * FROM games WHERE id = ?"
+    game = db.execute(query, (id,)).fetchone()
+    game = Game.from_row(game)
+    return game
 
-# replaces <0>...</0> with <_0>...</_0> and <0_hist>...</0_hist> with <_0_hist>...</_0_hist>
-xml = re.sub(r"<(\d{1,2}(?:_hist)?>)(.*)</(\d{1,2}(?:_hist)?>)", r"<_\1\2</_\3", xml)
+def load_save_file(filename:str):
+    """
+    """
 
-root = ET.fromstring(xml)
+    save_path = r"C:\Users\root\Documents\My Games\democracy3\savegames"
+    filename = "test1.xml"
 
-print("done")
+    with open(os.path.join(save_path, filename), "r") as f:
+        xml = f.read()
+
+    xml = "<xml>\n" + xml # add opening <xml> tag to complement end tag
+
+    # replaces <0>...</0> with <_0>...</_0> and <0_hist>...</0_hist> with <_0_hist>...</_0_hist>
+    xml = re.sub(r"<(\d{1,2}(?:_hist)?>)(.*)</(\d{1,2}(?:_hist)?>)", r"<_\1\2</_\3", xml)
+
+    root = ET.fromstring(xml)
+
+    print("done")
+
+
+
 
 
 
