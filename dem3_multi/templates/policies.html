@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for policy in policies %}
+        <div class="card">
+            <div class="card-head">
+                <h4>{{ policy.name }}</h4>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock content %}

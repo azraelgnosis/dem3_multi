@@ -2,7 +2,7 @@ from flask import (
     Blueprint, render_template
 )
 
-from dem3_multi.data import get_games, get_game
+from dem3_multi.data import get_games, get_game, get_policies
 
 bp = Blueprint('dem3', __name__)
 
@@ -26,3 +26,12 @@ def game(id:int):
     game = get_game(id)
 
     return render_template('game.html', game=game)
+
+@bp.route('/policies')
+def policies():
+    """
+    """
+
+    policies = get_policies()
+
+    return render_template('policies.html', policies=policies)
