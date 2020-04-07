@@ -118,7 +118,7 @@ def load_save_file(filename:str="test3.xml") -> ET.Element:
     return g.save
 
 
-def get_policies():
+def get_policies() -> list:
     game = load_save_file()
 
     policies = game.find(".//policies")
@@ -126,7 +126,18 @@ def get_policies():
 
     return policies
 
+def get_policy(policy_name:str) -> Policy:
+    """
+    Finds and returns the specified Policy object.
 
+    `policy_name`: Name of the policy being retrieved.
+
+    Return the Policy object matching `policy_name`.
+    """
+    policies = get_policies()
+    policy = next(filter(lambda p: p.name == policy_name, policies))
+
+    return policy
 
 
 
