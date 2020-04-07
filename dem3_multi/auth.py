@@ -37,8 +37,6 @@ def username_exists(username:str) -> bool:
     
     return bool(db.execute(query, (username,)).fetchone())
         
-
-
 @bp.route('/login/', methods=('GET', 'POST'))
 def login():
     if request.method == 'POST':

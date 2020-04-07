@@ -5,3 +5,7 @@ nav {
 [id*='error'], .flash {
     color: red;
 }
+
+.container {
+    max-width: 90%;
+}

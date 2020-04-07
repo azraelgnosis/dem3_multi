@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    {% for policy in policies %}
-        <div class="card">
-            <div class="card-head">
-                <h4>{{ policy.name }}</h4>
-            </div>
+    <div class="container">
+        <div class="row">
+            {% for policy in policies %}
+                {% if policy.active == 1 %}  
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-head">
+                                <h4><a href="{{ url_for('dem3.policy', policy_name=policy.name) }}">{{ policy.name }}</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
         </div>
-    {% endfor %}
-
+    </div>
 {% endblock content %}
