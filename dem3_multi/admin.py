@@ -3,13 +3,9 @@ from flask import (
     )
 import functools
 
+from dem3_multi.data import get_db
+
 bp = Blueprint("admin", __name__, url_prefix="/admin")
-
-@bp.route("/")
-@admin_privileges
-def portal():
-    return "Administrative Portal"
-
 
 def admin_privileges(view):
     @functools.wraps(view)
@@ -19,3 +15,8 @@ def admin_privileges(view):
         return redirect(url_for('auth.login'))
     
     return wrapped_view
+
+@bp.route("/")
+@admin_privileges
+def portal():
+    return "Administrative Portal"
