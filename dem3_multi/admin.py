@@ -3,7 +3,7 @@ from flask import (
     )
 import functools
 
-from dem3_multi.data import get_db
+from dem3_multi.data import get_db, get_tables, get_table
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -20,3 +20,15 @@ def admin_privileges(view):
 @admin_privileges
 def portal():
     return "Administrative Portal"
+
+@bp.route("/tables/")
+def tables():
+    tables = get_tables()
+
+    return render_template("admin/tables.html", tables=tables)
+
+@bp.route("/tables/<string:name>")
+def table(name):
+    table = get_table()
+
+    return render_template("admin/table.html", table=table)
