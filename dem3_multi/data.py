@@ -8,7 +8,7 @@ from werkzeug.security import generate_password_hash
 import xml.etree.ElementTree as ET
 
 from dem3_multi.models import (
-    Game, Row, User
+    Game, Row, Table, User
 )
 from dem3_multi.game_models import Policy
 
@@ -36,17 +36,64 @@ def get_users() -> list:
 
     return users
 
-def get_user(username:str) -> User:
+def get_user(user_info) -> User:
     """
     Retrieve user from database if present.
     """
 
+    user = None
+    if isinstance(user_info, int):
+        user = get_user_by_id(user_info)
+    elif isinstance(user_info, str):
+        user = get_user_by_name(user_info)
+
+    return user
+
+def get_user_by_id(user_id:int) -> User:
     db = get_db()
-    query = "SELECT * FROM users WHERE username = ?"
-    user = db.execute(query, (username,)).fetchone()
+    user_data = db.execute(
+        """
+        SELECT users.id, users.username, users.password, roles.name AS role, games.name AS game
+            FROM users
+            LEFT JOIN map_users_roles AS map_role ON map_role.user_id = users.id
+            LEFT JOIN roles ON map_role.role_id = roles.id
+            LEFT JOIN map_users_games AS map_game ON map_game.user_id = users.id
+            LEFT JOIN games ON map_game.game_id = games.id
+            WHERE users.id = ?
+        """,
+        (user_id,)
+    ).fetchall()
 
     try:
-        user = User(user.id, user.username, user.password)
+        user = User(user_data[0]['id'], user_data[0]['username'], user_data[0]['password'])
+        for row in user_data:
+            user.add_role(row.role) if row.role else None
+            user.add_game(row.game) if row.game else None
+    except AttributeError:
+        user = None
+
+    return user
+
+def get_user_by_name(username:str) -> User:
+    db = get_db()
+    user_data = db.execute(
+        """
+        SELECT users.id, users.username, users.password, roles.name AS role, games.name AS game
+            FROM users
+            LEFT JOIN map_users_roles AS map_role ON map_role.user_id = users.id
+            LEFT JOIN roles ON map_role.role_id = roles.id
+            LEFT JOIN map_users_games AS map_game ON map_game.user_id = users.id
+            LEFT JOIN games ON map_game.game_id = games.id
+            WHERE users.username = ?
+        """,
+        (username,)
+    ).fetchall()
+
+    try:
+        user = User(user_data[0]['id'], user_data[0]['username'], user_data[0]['password'])
+        for row in user_data:
+            user.add_role(row.role) if row.role else None
+            user.add_game(row.game) if row.game else None
     except AttributeError:
         user = None
 
@@ -145,6 +192,17 @@ def get_game(id:int) -> Game:
     game = db.execute(query, (id,)).fetchone()
     game = Game.from_row(game)
     return game
+
+def get_tables() -> list:
+    db = get_db()
+
+    tables = db.execute("SELECT name FROM sqlite_master WHERE type='table';").fetchall()
+    tables = [Table(table['name'], db) for table in tables[1:]]
+
+    return tables
+
+#TODO
+def get_table() -> Table: return
 
 #TODO
 def load_save_file(filename:str="test3.xml") -> ET.Element:
