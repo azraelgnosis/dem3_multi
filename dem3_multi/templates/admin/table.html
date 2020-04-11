@@ -1,5 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <table class="table">
+        <thead>
+            <tr>
+                {% for col in table.columns %}
+                    <th>{{ col }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in table.rows %}
+                <tr>
+                    {% for col in table.columns %}
+                        <td>{{ row[col] }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock content %}

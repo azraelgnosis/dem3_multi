@@ -4,7 +4,7 @@ from flask import (
 import functools
 from werkzeug.security import check_password_hash, generate_password_hash
 
-from dem3_multi.data import get_db, get_user, get_usernames, add_user
+from dem3_multi.db import get_db, get_user, get_usernames, select, insert
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 
@@ -20,7 +20,7 @@ def register():
             error = f"User {username} already exists."
 
         if not error:
-            add_user(username, password)
+            insert('users', values=[username, password]) #! add_user(username, password)
             return redirect(url_for('auth.login'))
         
         flash(error)

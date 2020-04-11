@@ -3,7 +3,7 @@ from flask import (
     )
 import functools
 
-from dem3_multi.data import get_db, get_tables, get_table
+from dem3_multi.db import get_db, get_tables, get_table, select
 
 bp = Blueprint("admin", __name__, url_prefix="/admin")
 
@@ -29,6 +29,6 @@ def tables():
 
 @bp.route("/tables/<string:name>")
 def table(name):
-    table = get_table()
+    table = get_table(name)
 
     return render_template("admin/table.html", table=table)

@@ -13,8 +13,10 @@ def create_app():
     except OSError:
         pass
 
+    from . import db
+    db.init_app(app)
+
     from . import data
-    data.init_app(app)
 
     from . import auth
     app.register_blueprint(auth.bp)

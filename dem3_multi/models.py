@@ -19,18 +19,18 @@ class Model:
         new_obj = cls()
 
         for key in row.keys():
-            setattr(new_obj, key, row[key]) #? Do Row objects have __getitem__?
+            setattr(new_obj, key, row[key])
         
         new_obj.init()
 
         return new_obj
 
 class Table(Model):
-    __slots__ = ["db", "name", "columns", "size"]
+    __slots__ = ["db", "name", "columns", "size", "rows"]
 
-    def __init__(self, name:str, db=None):
-        self.db = db
+    def __init__(self, name:str, db):
         self.name = name
+        self.db = db
 
         self.columns = []
         self.size = -1
@@ -38,8 +38,8 @@ class Table(Model):
         self._set_columns()
         self._set_size()
 
-    def set_db(self, db:sqlite3.Connection) -> None:
-        self.db = db
+    # def set_db(self, db:sqlite3.Connection) -> None:
+    #     self.db = db
 
     def _set_columns(self) -> None:
         """
@@ -59,7 +59,7 @@ class Table(Model):
         self.size = size
 
     def __len__(self): return self.size
-    def __repr__(self): return self.name
+    def __repr__(self): return f"{self.name}: {', '.join(self.columns)}"
 
 class User(Model):
     __slots__ = ["id", "username", "password", "roles", "games"]
