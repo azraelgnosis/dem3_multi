@@ -25,22 +25,12 @@ def game(id:int):
     game = select('games', id=id)
     return render_template('game.html', game=game)
 
-@bp.route('/policies')
-def policies():
-    policies = get_game_data('policies') #policies = get_policies()
-    return render_template('policies.html', policies=policies)
+@bp.route('/<string:stats_type>/')
+def stats(stats_type):
+    data = get_game_data(stats_type)
+    return render_template(f'stats.html', data=data, stats_type=stats_type)
 
-@bp.route('/policies/<string:policy_name>')
-def policy(policy_name:str):
-    policy = get_game_datum('policies', policy_name) # policy = get_policy(policy_name)
-    return render_template('policy.html', policy=policy)
-
-@bp.route('/situations/')
-def situations():
-    situations = get_game_data('situations')
-    return render_template('situations.html', situations=situations)
-
-@bp.route('/situations/<string:name>')
-def situation(name:str):
-    situation = get_game_datum('situations', name)
-    return render_template('situation.html', situaiton=situation)
+@bp.route('/<string:stats_type>/<string:stat_name>')
+def stat(stats_type, stat_name):
+    datum = get_game_datum(stats_type, stat_name)
+    return render_template(f'{stats_type}.html', datum=datum)

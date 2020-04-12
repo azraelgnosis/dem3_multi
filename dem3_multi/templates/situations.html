@@ -1,19 +1,6 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            {% for situation in situations %}
-                {% if situation.active %}  
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-head">
-                                <h4><a href="{{ url_for('dem3.situation', name=situation.name) }}">{{ situation.name }}</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+    <h1>{{ datum.name }}</h1>
+    <p>Value: {{ (100*datum.value)|round }}%</p>
 {% endblock content %}

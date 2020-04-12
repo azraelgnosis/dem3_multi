@@ -1,19 +1,11 @@
+
+
 {% extends 'base.html' %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            {% for policy in policies %}
-                {% if policy.active %}  
-                    <div class="col-md-4">
-                        <div class="card">
-                            <div class="card-head">
-                                <h4><a href="{{ url_for('dem3.policy', policy_name=policy.name) }}">{{ policy.name }}</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-    </div>
+    <h1>{{ datum.name }}</h1> <!-- TODO: Center text -->
+    <p>{{ datum.description }}</p>
+    <p>Implementation: {{ (100*datum.implementation) | round }}%</p>
+    <p>Target: {{ (100*datum.target)|round }}%</p>
+    <p>Value: {{ (100*datum.value)|round }}%</p>
 {% endblock content %}

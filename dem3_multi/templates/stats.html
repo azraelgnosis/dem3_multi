@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for datum in data %}
+                {% if datum.active or datum.status %}  
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-head">
+                                <h4><a href="{{ url_for('dem3.stat', stats_type=stats_type, stat_name=datum.name) }}">{{ datum.name }}</a></h4>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock content %}
