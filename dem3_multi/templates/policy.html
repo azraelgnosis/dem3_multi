@@ -2,4 +2,8 @@
 
 {% block content %}
     <h1>{{ policy.name }}</h1> <!-- TODO: Center text -->
+    <p>{{ policy.description }}</p>
+    <p>Implementation: {{ (100*policy.implementation) | round }}%</p>
+    <p>Target: {{ (100*policy.target)|round }}%</p>
+    <p>Value: {{ (100*policy.value)|round }}%</p>
 {% endblock content %}

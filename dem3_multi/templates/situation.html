@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ situaiton.name }}</h1>
+    <p>Value: {{ (100*situaiton.value)|round }}%</p>
+{% endblock content %}
