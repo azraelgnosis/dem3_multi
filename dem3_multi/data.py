@@ -3,7 +3,18 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-from dem3_multi.game_models import Policy
+from dem3_multi.game_models import Policy, Situation
+
+mapping = {
+    'policies': {
+        'subtype': 'policy',
+        'class': Policy
+    },
+    'situations': {
+        'subtype': 'situation',
+        'class': Situation
+    }
+}
 
 #TODO
 def load_save_file(filename:str="test3.xml") -> ET.Element:
@@ -27,26 +38,24 @@ def load_save_file(filename:str="test3.xml") -> ET.Element:
     
     return g.save
 
-def get_policies() -> list:
-    game = load_save_file()
-
-    policies = game.find(".//policies")
-    policies = [Policy.from_xml(policy) for policy in policies.iter('policy')]
-
-    return policies
-
-def get_policy(policy_name:str) -> Policy:
+def get_game_data(datatype:str) -> list:
     """
-    Finds and returns the specified Policy object.
-
-    `policy_name`: Name of the policy being retrieved.
-
-    Return the Policy object matching `policy_name`.
     """
-    policies = get_policies()
-    policy = next(filter(lambda p: p.name == policy_name, policies))
 
-    return policy
+    save = load_save_file()
+    data = save.find(f".//{datatype}")
+    
+    Class = mapping.get(datatype)['class']
+    subtype = mapping.get(datatype)['subtype']
+    data = [Class.from_xml(datum) for datum in data.iter(subtype)]
 
+    return data
 
+def get_game_datum(datatype:str, data_name:str):
+    """
+    """
+    
+    data = get_game_data(datatype)
+    datum = next(filter(lambda d: d.name == data_name, data))
 
+    return datum
