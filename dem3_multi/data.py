@@ -3,9 +3,13 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-from dem3_multi.game_models import Policy, Situation
+from dem3_multi.game_models import Minister, Policy, Situation
 
 mapping = {
+    'ministers': {
+        'subtype': 'minister',
+        'class': Minister
+    },
     'policies': {
         'subtype': 'policy',
         'class': Policy

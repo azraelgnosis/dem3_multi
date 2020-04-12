@@ -11,8 +11,12 @@ class Game_Model(Model):
         'activehistory': 'active_history',
         'incom_mult': 'income_mult',
         'costhistory': 'cost_history',
-        'incomehistory': 'income_history'
+        'incomehistory': 'income_history',
+        'fullname': 'name'
     }
+
+    def __init__(self):
+        self.name = None
 
     def _split_lists(self):
         for prop in self.lists:
@@ -60,6 +64,8 @@ class Game_Model(Model):
             except ValueError: 
                 pass
         return val
+
+    def __repr__(self): return f"{self.name}"
 
 
 class Party(Game_Model): ...
