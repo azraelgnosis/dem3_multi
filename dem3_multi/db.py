@@ -40,7 +40,7 @@ def select(table:str, columns:list=["*"], id:int=None, name:str=None, datatype=T
     if id:
         query += f" WHERE {table}.id = {id}"
     elif name:
-        query += f" WHERE {table}.name = {name}"
+        query += f' WHERE {table}.name = "{name}"'
 
     results = db.execute(query).fetchall()
 
@@ -55,8 +55,9 @@ def insert(table:str, values:list=[]) -> None:
     """INSERT INTO `table` VALUES (NULL, `values`);"""
 
     db = get_db()
-    query = f"INSERT INTO {table} VALUES (NULL, ?)"
-    db.execute(query, (", ".join(values)),) # join requires strings as arguments
+    placeholders = ", ".join("?" * len(values))
+    query = f"INSERT INTO {table} VALUES (NULL, {placeholders})"
+    db.execute(query, (values)) # join requires strings as arguments
     db.commit()
 
 def get_user(user_info) -> User:
@@ -106,31 +107,6 @@ def get_usernames() -> list:
 
     return usernames
 
-# def add_user(username:str, password:str) -> None:
-#     """
-#     Insert username and password into `users` table
-#     """
-#     db = get_db()
-
-#     query = "INSERT INTO users (username, password) VALUES (?, ?)"
-#     db.execute(query, (username, password))
-#     db.commit()
-
-# def get_role_id(role_name:str) -> int:
-#     """
-#     Retrieve the id of the role by name.
-
-#     `role_name` is the name of the role as stored in the database.
-#     """
-
-#     db = get_db()
-
-#     role = db.execute(
-#         "SELECT roles.id FROM roles WHERE roles.name = ?", (role_name,)
-#     ).fetchone()
-
-#     return role.id
-
 def add_user_role(user_id:int, role_name:str) -> None:
     """
     Add a role to a user.
@@ -149,33 +125,10 @@ def add_user_role(user_id:int, role_name:str) -> None:
             role_name=role_name, username=select('users', ['username'], id=user_id) # role_name=role_name, username=get_username(user_id)
         ))
 
-        role_id = select('roles', columns=['id'], name=role_name, datatype=False) #get_role_id(role_name)
-        db.execute(
-            "INSERT INTO map_users_roles " \
-                "(user_id, role_id) VALUES (?, ?);", (user_id, role_id)
-        )
+        role_id = select('roles', columns=['id'], name=role_name, datatype=False)[0]['id'] #get_role_id(role_name)
+        insert('map_users_roles', values=[user_id, role_id]) 
 
         db.commit()
-
-# def get_games() -> list:
-#     """
-#     """
-#     db = get_db()
-#     query = "SELECT * FROM games"
-#     games = db.execute(query).fetchall()
-#     games = [Game.from_row(game) for game in games if game]
-
-#     return games
-
-# def get_game(id:int) -> Game:
-#     """
-#     Return Game based on id
-#     """
-#     db = get_db()
-#     query = "SELECT * FROM games WHERE id = ?"
-#     game = db.execute(query, (id,)).fetchone()
-#     game = Game.from_row(game)
-#     return game
 
 def get_tables() -> list:
     db = get_db()
@@ -193,7 +146,7 @@ def get_table(name:str) -> Table:
     """
     db = get_db()
     table = Table(name, db)
-    table.rows = select(name) # db.execute("SELECT * FROM {table};")
+    table.rows = select(name)
 
     return table
 
@@ -209,6 +162,7 @@ def init_db():
 
     root_init()    
 
+# heroku run python -m flask init-db
 @click.command('init-db')
 @with_appcontext
 def init_db_command():
@@ -219,6 +173,7 @@ def init_app(app):
     app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
 
+@with_appcontext
 def root_init():
     """
     Add root admin account.
