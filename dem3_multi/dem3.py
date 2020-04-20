@@ -3,7 +3,7 @@ from flask import (
 )
 
 from dem3_multi.db import select
-from dem3_multi.data import get_game_data, get_game_datum
+from dem3_multi.data import mapping, get_game_data, get_game_datum
 
 bp = Blueprint('dem3', __name__)
 
@@ -33,4 +33,5 @@ def stats(stats_type):
 @bp.route('/<string:stats_type>/<string:stat_name>')
 def stat(stats_type, stat_name):
     datum = get_game_datum(stats_type, stat_name)
-    return render_template(f'{stats_type}.html', datum=datum)
+    template = mapping.get(stats_type)['subtype']
+    return render_template(f'{template}.html', datum=datum)
