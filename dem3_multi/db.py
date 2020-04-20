@@ -27,7 +27,9 @@ def get_db() -> sqlite3.Connection:
 #? Might be expanded with Where and Join objects
 def select(table:str, columns:list=["*"], id:int=None, name:str=None, datatype=True) -> list:
     """
-    Selects `columns` FROM `table` [WHERE `table`.id = `id`].
+    SELECT `columns` FROM `table`
+        [WHERE `table`.id = `id`]
+        [WHERE `table`.name = `name`]
 
     Returns a list of the results.
     """
@@ -59,6 +61,27 @@ def insert(table:str, values:list=[]) -> None:
     query = f"INSERT INTO {table} VALUES (NULL, {placeholders})"
     db.execute(query, (values)) # join requires strings as arguments
     db.commit()
+
+def update(table:str, set:dict, where=None) -> None:
+    """
+    UPDATE `table`
+        SET `mapping`
+        [WHERE `table`.id = `id]
+        [WHERE `table`.name = `name`]
+    """
+
+    SET = ", ".join(f"{key} = {val}" for key, val in set.items())
+
+    WHERE = "WHERE "
+
+    if isinstance(where, int):
+        WHERE += f"{table}.id = ?"
+    else:
+        WHERE += f"{table}.name = ?"
+
+    query = f"UPDATE {table} SET {SET} WHERE {WHERE}"
+
+    get_db().execute(query, (where,))
 
 def get_user(user_info) -> User:
     """
