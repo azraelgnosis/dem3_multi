@@ -1,9 +1,39 @@
 {% extends 'base.html' %}
 
+{% block head %}
+    <style>
+        input[type="range"] {
+            position: absolute;
+        }
+
+        #new_value {
+            opacity: 0.4;
+        }
+
+        canvas {
+            border-style: solid;
+        }
+    </style>
+{% endblock head %}
+
 {% block content %}
-    <h1>{{ policy.name }}</h1> <!-- TODO: Center text -->
-    <p>{{ policy.description }}</p>
-    <p>Implementation: {{ (100*policy.implementation) | round }}%</p>
-    <p>Target: {{ (100*policy.target)|round }}%</p>
-    <p>Value: {{ (100*policy.value)|round }}%</p>
+    <form>
+        <h1>{{ datum.name }}</h1> <!-- TODO: Center text -->
+        <p>{{ datum.description }}</p>
+        <p>Implementation: {{ (100*datum.implementation) | round }}%</p>
+        <div style="height: 2em; border-style: solid;">
+            <div style="height: 100%; width: {{ 100*datum.implementation }}%; background-color: blue;"></div>
+        </div>
+        <p>Target: {{ (100*datum.target)|round }}%</p>
+        <p>Value: {{ (100*datum.value)|round }}%</p>
+        
+        <input type="range" max=100 min=0 value={{ 100*datum.value }} id="old_value" disabled/>
+        <input type="range" max=100 min=0 value={{ 100*datum.target }} id="new_value"/>
+    </form>
+    {% include '_line_graph.html' %}
 {% endblock content %}
+
+{% block scripts %}
+    <script>var cost_history = {{ datum.cost_history }}.reverse();</script>
+    <script src="{{ url_for('static', filename='scripts/line_graph.js') }}"></script>
+{% endblock scripts %}
