@@ -3,4 +3,6 @@
 {% block content %}
     <h1>{{ datum.name }}</h1>
     <p>Value: {{ (100*datum.value)|round }}%</p>
+
+    <div class="line_graph" data=""></div> <!-- TODO: -->
 {% endblock content %}
