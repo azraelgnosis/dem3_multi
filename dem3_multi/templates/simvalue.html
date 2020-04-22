@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ datum.name }}</h1>
+    <p>Value: {{ datum.value }}</p>
+    
+    <div class="line_graph" data=""></div> <!-- TODO -->
+{% endblock content %}

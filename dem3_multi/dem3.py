@@ -35,3 +35,6 @@ def stat(stats_type, stat_name):
     datum = get_game_datum(stats_type, stat_name)
     template = mapping.get(stats_type)['subtype']
     return render_template(f'{template}.html', datum=datum)
+    
+@bp.route('/finances')
+def finances(): ...

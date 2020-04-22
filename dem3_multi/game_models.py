@@ -47,6 +47,7 @@ class Game_Model(Model):
 
         #? maybe the values should remain as strings
         split_list = [Game_Model._coerce_type(val) for val in prop.split(',')[:-1]]
+        split_list.reverse()
         # try:
         #     split_list = [int(val) for val in prop.split(',')[:-1]]
         # except ValueError:
@@ -70,7 +71,10 @@ class Game_Model(Model):
 
 class Party(Game_Model): ...
 class Voter(Game_Model): ...
-class VoterType(Game_Model): ...    
+
+class VoterType(Game_Model):
+    lists = ('history', 'perc_history')
+    active = True
 
 class Policy(Game_Model):
     __slots__ = [
@@ -120,7 +124,11 @@ class Situation(Game_Model):
 
 
 class Dilemma(Game_Model): ...
-class Simvalue(Game_Model): ...
+
+class Simvalue(Game_Model):
+    lists = ['history']
+    active = True
+
 class Grudge(Game_Model): ...
 class Minister(Game_Model): ...
 class PressureGroup(Game_Model): ...

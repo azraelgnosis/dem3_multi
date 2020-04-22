@@ -2,16 +2,16 @@
 
 {% block head %}
     <style>
+        div#value_sliders {
+            display: inline-block;
+            height: 2em;
+        }
         input[type="range"] {
             position: absolute;
         }
 
         #new_value {
             opacity: 0.4;
-        }
-
-        canvas {
-            border-style: solid;
         }
     </style>
 {% endblock head %}
@@ -22,18 +22,16 @@
         <p>{{ datum.description }}</p>
         <p>Implementation: {{ (100*datum.implementation) | round }}%</p>
         <div style="height: 2em; border-style: solid;">
-            <div style="height: 100%; width: {{ 100*datum.implementation }}%; background-color: blue;"></div>
+            <div style="height: 100%; background-color: blue; width: {{ 100*datum.implementation }}%;"></div>
         </div>
         <p>Target: {{ (100*datum.target)|round }}%</p>
         <p>Value: {{ (100*datum.value)|round }}%</p>
         
-        <input type="range" max=100 min=0 value={{ 100*datum.value }} id="old_value" disabled/>
-        <input type="range" max=100 min=0 value={{ 100*datum.target }} id="new_value"/>
-    </form>
-    {% include '_line_graph.html' %}
+        <div id="value_sliders">
+            <input type="range" max=100 min=0 value={{ 100*datum.value }} id="old_value" disabled/>
+            <input type="range" max=100 min=0 value={{ 100*datum.target }} id="new_value"/>
+        </div>
+    </form>      
+    
+    <div class="line_graph" id="graph" data="{{datum.cost_history}}"></div>
 {% endblock content %}
-
-{% block scripts %}
-    <script>var cost_history = {{ datum.cost_history }}.reverse();</script>
-    <script src="{{ url_for('static', filename='scripts/line_graph.js') }}"></script>
-{% endblock scripts %}

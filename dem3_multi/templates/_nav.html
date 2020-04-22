@@ -6,6 +6,8 @@
             <li class="nav-item"><a class="nav-link" href="{{ url_for('dem3.stats', stats_type='policies') }}">Policies</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('dem3.stats', stats_type='situations') }}">Situations</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ url_for('dem3.stats', stats_type='ministers') }}">Ministers</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('dem3.stats', stats_type='simvalues') }}">Simvalues</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ url_for('dem3.stats', stats_type='votertypes') }}">Voter Types</a></li>
         </ul>
         <ul class="navbar-nav">
             {% if g.user %}

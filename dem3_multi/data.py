@@ -3,7 +3,7 @@ import os
 import re
 import xml.etree.ElementTree as ET
 
-from dem3_multi.game_models import Minister, Policy, Situation
+from dem3_multi.game_models import Minister, Policy, Simvalue, Situation, VoterType
 
 mapping = {
     'ministers': {
@@ -14,9 +14,17 @@ mapping = {
         'subtype': 'policy',
         'class': Policy
     },
+    'simvalues': {
+        'subtype': 'simvalue',
+        'class': Simvalue
+    },
     'situations': {
         'subtype': 'situation',
         'class': Situation
+    },
+    'votertypes': {
+        'subtype': 'votertype',
+        'class': VoterType
     }
 }
 
@@ -63,3 +71,12 @@ def get_game_datum(datatype:str, data_name:str):
     datum = next(filter(lambda d: d.name == data_name, data))
 
     return datum
+
+def get_finances():
+    """
+    """
+
+    save = load_save_file()
+    finances = save.find(f".//finances")
+
+    return
