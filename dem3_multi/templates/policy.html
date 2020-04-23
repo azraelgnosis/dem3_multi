@@ -33,5 +33,25 @@
         </div>
     </form>      
     
-    <div class="line_graph" id="graph" data="{{datum.cost_history}}"></div>
+    {% if datum.cost_history|any %}
+        <div class="line_graph" id="cost_history" title="Cost History" data="{{ datum.cost_history|tojson }}"></div>
+    {% endif %}
+    {% if datum.income_history|any %}
+        <div class="line_graph" id="income_history" title="Income History" data="{{ datum.income_history }}"></div>
+    {% endif %}
 {% endblock content %}
+
+{% block scripts %}
+    <script>
+        var data_points;
+        switch ($('div.line_graph').attr('id')) {
+            case 'cost_history':
+                data_points = {{ datum.cost_history|tojson|safe }};
+                break;
+            case 'income_history':
+                data_points = {{ datum.income_history|tojson|safe }};
+                break;
+        }
+    </script>
+    <script src="{{ url_for('static', filename='scripts/line_graph.js') }}"></script>
+{% endblock scripts %}  

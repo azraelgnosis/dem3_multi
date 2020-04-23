@@ -107,7 +107,7 @@ class Policy(Game_Model):
     def __repr__(self): return f"{self.name}"
 
 class Situation(Game_Model):
-    lists = ()
+    lists = ('history', 'active_history')
 #     @staticmethod
 #     def from_xml(xml:Element) -> 'Situation':
 #         new_situation = Situation()

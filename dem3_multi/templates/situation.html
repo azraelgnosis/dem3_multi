@@ -4,5 +4,12 @@
     <h1>{{ datum.name }}</h1>
     <p>Value: {{ (100*datum.value)|round }}%</p>
 
-    <div class="line_graph" data=""></div> <!-- TODO: -->
+    <div class="line_graph" title="Intesity Over Time"></div> <!-- TODO: -->
 {% endblock content %}
+
+{% block scripts %}
+    <script>
+        let data_points = {{ datum.history|tojson|safe }};
+    </script>
+    <script src="{{ url_for('static', filename='scripts/line_graph.js') }}"></script>
+{% endblock scripts %}
