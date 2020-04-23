@@ -8,6 +8,9 @@ def create_app():
         DATABASE=os.path.join(app.instance_path, 'dem3_multi.sqlite'),
     )
 
+    @app.template_filter('any')
+    def any_filter(arr): return any(arr)
+
     try:
         os.makedirs(app.instance_path)
     except OSError:
