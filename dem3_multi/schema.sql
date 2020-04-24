@@ -27,7 +27,7 @@ CREATE TABLE map_users_roles (
 
 CREATE TABLE games (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    name TEXT NOT NULL,
+    name TEXT UNIQUE NOT NULL,
     country TEXT NOT NULL
 );
 

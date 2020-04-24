@@ -1,8 +1,8 @@
 from flask import (
-    Blueprint, render_template
+    Blueprint, render_template, session
 )
 
-from dem3_multi.db import select
+from dem3_multi.db import select, get_games
 from dem3_multi.data import mapping, get_game_data, get_game_datum
 
 bp = Blueprint('dem3', __name__)
@@ -15,9 +15,10 @@ def index():
 def dashboard():
     return render_template('dashboard.html')
 
-@bp.route('/games')
+@bp.route('/games/')
 def games():
-    games = select('games')
+    user_id = session.get('user_id')
+    games = get_games(user_id)
     return render_template('games.html', games=games)
 
 @bp.route('/games/<int:id>')

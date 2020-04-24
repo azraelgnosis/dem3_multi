@@ -14,8 +14,18 @@
         </thead>
         <tbody>
             {% for game in games %}
-                <td><a href="{{ url_for('dem3.game', id=game.id) }}">{{ game.name }}</a></td>
-                <td><img class="flag" src="{{ url_for('static', filename='images/flags/' + game.country + '.png') }}" /></td>
+                <tr>
+                    <td><a href="{{ url_for('dem3.game', id=game.id) }}">{{ game.name }}</a></td>
+                    <td><img class="flag" src="{{ url_for('static', filename='images/flags/' + game.country + '.png') }}" /></td>
+                    {% if g.user %}
+                        {% if game.user_id  %}
+                            <td><input type="submit" class="btn-primary" value="Umm..." /></td>
+                        {% else %}
+                            <td><input type="submit" class="btn-success" value="Join" /></td>    
+                        {% endif %}
+                    {% endif %}
+                    
+                </tr>
             {% endfor %}
         </tbody>
     </table>

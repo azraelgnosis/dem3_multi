@@ -153,6 +153,20 @@ def add_user_role(user_id:int, role_name:str) -> None:
 
         db.commit()
 
+def get_games(user_id:int='NULL') -> list:
+    db = get_db()
+
+    query = """SELECT games.id, games.name, games.country, map.user_id FROM games 
+                LEFT JOIN 
+                    (SELECT user_id, game_id FROM map_users_games 
+                        WHERE user_id = ?) 
+                    AS map on map.game_id = games.id
+                """
+
+    results = db.execute(query, (user_id,)).fetchall()
+
+    return results
+
 def get_tables() -> list:
     db = get_db()
 
