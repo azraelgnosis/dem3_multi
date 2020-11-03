@@ -1,62 +1,62 @@
 <header>
-<version>1.286</version>
+	<version>1.286</version>
 </header>
 <load_data>
-<date>5/4/2020 (DD-MM-YYYY) - 17:56</date>
+	<date>5/4/2020 (DD-MM-YYYY) - 17:56</date>
 </load_data>
 <mission>
-<name>usa</name>
-<termlimit>2</termlimit>
-<termlength>16</termlength>
-<difficulty>0.50000000</difficulty>
-<apathy>0.57999998</apathy>
-<socialism>0.50000000</socialism>
-<liberalism>0.50000000</liberalism>
-<num_options>2</num_options>
-<0>EARTHQUAKES</0>
-<1>HURRICANES</1>
+	<name>usa</name>
+	<termlimit>2</termlimit>
+	<termlength>16</termlength>
+	<difficulty>0.50000000</difficulty>
+	<apathy>0.57999998</apathy>
+	<socialism>0.50000000</socialism>
+	<liberalism>0.50000000</liberalism>
+	<num_options>2</num_options>
+	<0>EARTHQUAKES</0>
+	<1>HURRICANES</1>
 </mission>
 <hashtable>
-<hashes>Socialist,0,Capitalist,1,Retired,2,Commuter,3,Patriot,4,Motorist,5,Liberal,6,Religious,7,TradeUnionist,8,SelfEmployed,9,Environmentalist,10,Wealthy,11,Poor,12,MiddleIncome,13,Parents,14,Farmers,15,StateEmployees,16,Conservatives,17,Young,18,EthnicMinorities,19,_All_,20,</hashes>
+	<hashes>Socialist,0,Capitalist,1,Retired,2,Commuter,3,Patriot,4,Motorist,5,Liberal,6,Religious,7,TradeUnionist,8,SelfEmployed,9,Environmentalist,10,Wealthy,11,Poor,12,MiddleIncome,13,Parents,14,Farmers,15,StateEmployees,16,Conservatives,17,Young,18,EthnicMinorities,19,_All_,20,</hashes>
 </hashtable>
 <parties>
-<party>
-<guiname>The Peoples Popular Front</guiname>
-<status>2</status>
-<type>1</type>
-<memberslastturn>1437</memberslastturn>
-<member_history>1437,1437,1437,1340,1447,1462,1326,1374,1407,1362,</member_history>
-<activist_history>85,0,133,122,130,140,135,129,121,127,</activist_history>
-</party>
-<party>
-<guiname>The Democratic Conservatives</guiname>
-<status>2</status>
-<type>0</type>
-<memberslastturn>0</memberslastturn>
-<member_history>0,0,0,0,0,0,0,0,0,0,</member_history>
-<activist_history>0,0,0,0,0,0,0,0,0,0,</activist_history>
-</party>
+	<party>
+		<guiname>The Peoples Popular Front</guiname>
+		<status>2</status>
+		<type>1</type>
+		<memberslastturn>1437</memberslastturn>
+		<member_history>1437,1437,1437,1340,1447,1462,1326,1374,1407,1362,</member_history>
+		<activist_history>85,0,133,122,130,140,135,129,121,127,</activist_history>
+	</party>
+	<party>
+		<guiname>The Democratic Conservatives</guiname>
+		<status>2</status>
+		<type>0</type>
+		<memberslastturn>0</memberslastturn>
+		<member_history>0,0,0,0,0,0,0,0,0,0,</member_history>
+		<activist_history>0,0,0,0,0,0,0,0,0,0,</activist_history>
+	</party>
 </parties>
 <voters>
-<voter>
-<milit>0.42267609</milit>
-<invotech>0.53627259</invotech>
-<inincome>0.19329834</inincome>
-<insocial>1.00000000</insocial>
-<inliberal>0.58499146</inliberal>
-<radical>0.00000000</radical>
-<gender>0</gender>
-<oppsymp>0.89999998</oppsymp>
-<playsymp>0.00000000</playsymp>
-<lastvote>2</lastvote>
-<sur>93</sur>
-<fore>82</fore>
-<value>0.00472601</value>
-<party>The Peoples Popular Front</party>
-<orgs>
-</orgs>
-<groups>0 = 0.708676,1 = 0.291324,2 = 0.719345,3 = 0.000000,4 = 0.211911,5 = 0.000000,6 = 0.472575,7 = 0.063641,8 = 0.868820,9 = 0.000000,10 = 0.505548,11 = 0.000000,12 = 0.765037,13 = 0.000000,14 = 0.000000,15 = 0.027496,16 = 0.000000,17 = 0.527425,18 = 0.000000,19 = 0.626526,20 = 1.000000,</groups>
-</voter>
+	<voter>
+		<milit>0.42267609</milit>
+		<invotech>0.53627259</invotech>
+		<inincome>0.19329834</inincome>
+		<insocial>1.00000000</insocial>
+		<inliberal>0.58499146</inliberal>
+		<radical>0.00000000</radical>
+		<gender>0</gender>
+		<oppsymp>0.89999998</oppsymp>
+		<playsymp>0.00000000</playsymp>
+		<lastvote>2</lastvote>
+		<sur>93</sur>
+		<fore>82</fore>
+		<value>0.00472601</value>
+		<party>The Peoples Popular Front</party>
+		<orgs>
+		</orgs>
+	<groups>0 = 0.708676,1 = 0.291324,2 = 0.719345,3 = 0.000000,4 = 0.211911,5 = 0.000000,6 = 0.472575,7 = 0.063641,8 = 0.868820,9 = 0.000000,10 = 0.505548,11 = 0.000000,12 = 0.765037,13 = 0.000000,14 = 0.000000,15 = 0.027496,16 = 0.000000,17 = 0.527425,18 = 0.000000,19 = 0.626526,20 = 1.000000,</groups>
+	</voter>
 <voter>
 <milit>0.89593506</milit>
 <invotech>0.76943725</invotech>
@@ -39640,7 +39640,7 @@
 		<cost_scalar>1.00104392</cost_scalar>
 	</policy>
 	<policy>
-	<name>AgricultureSubsidies</name>
+		<name>AgricultureSubsidies</name>
 		<imp>0.20566320</imp>
 		<targ>0.86755955</targ>
 		<val>0.86755955</val>
@@ -42594,30 +42594,30 @@
 <earn_scalar>0.99895608</earn_scalar>
 <cost_scalar>1.00104392</cost_scalar>
 </policy>
-<policy>
-<name>BicycleSubsidies</name>
-<imp>0.00000000</imp>
-<targ>0.00000000</targ>
-<val>0.00000000</val>
-<history>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</history>
-<activehistory>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</activehistory>
-<active>0</active>
-<cost_mult>1.00000000</cost_mult>
-<incom_mult>1.00000000</incom_mult>
-<costhistory>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</costhistory>
-<incomehistory>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</incomehistory>
-<earn_scalar>0.93628287</earn_scalar>
-<cost_scalar>1.06371713</cost_scalar>
-</policy>
+	<policy>
+		<name>BicycleSubsidies</name>
+		<imp>0.00000000</imp>
+		<targ>0.00000000</targ>
+		<val>0.00000000</val>
+		<history>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</history>
+		<activehistory>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</activehistory>
+		<active>0</active>
+		<cost_mult>1.00000000</cost_mult>
+		<incom_mult>1.00000000</incom_mult>
+		<costhistory>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</costhistory>
+		<incomehistory>0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</incomehistory>
+		<earn_scalar>0.93628287</earn_scalar>
+		<cost_scalar>1.06371713</cost_scalar>
+	</policy>
 </policies>
 <situations>
-<situation>
-<name>SkillsShortage</name>
-<val>0.55471015</val>
-<active>1</active>
-<history>0.555,0.554,0.553,0.553,0.553,0.553,0.553,0.553,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.555,0.555,0.555,0.556,0.557,0.557,0.558,0.559,0.561,0.573,0.585,0.596,0.593,0.607,0.624,0.631,</history>
-<activehistory>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</activehistory>
-</situation>
+	<situation>
+		<name>SkillsShortage</name>
+		<val>0.55471015</val>
+		<active>1</active>
+		<history>0.555,0.554,0.553,0.553,0.553,0.553,0.553,0.553,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.554,0.555,0.555,0.555,0.556,0.557,0.557,0.558,0.559,0.561,0.573,0.585,0.596,0.593,0.607,0.624,0.631,</history>
+		<activehistory>1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,</activehistory>
+	</situation>
 <situation>
 <name>Pollution</name>
 <val>0.62710756</val>
@@ -42954,19 +42954,19 @@
 <history>0.146,0.155,0.098,0.098,0.098,0.098,0.098,0.098,0.099,0.099,0.099,0.099,0.099,0.099,0.099,0.099,0.099,0.100,0.100,0.101,0.102,0.103,0.104,0.105,0.102,0.100,0.113,0.125,0.134,0.127,0.176,0.223,0.195,</history>
 <activehistory>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</activehistory>
 </situation>
-<situation>
-<name>ExtremePoverty</name>
-<val>0.00362110</val>
-<active>0</active>
-<history>0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.005,0.004,0.003,</history>
-<activehistory>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</activehistory>
-</situation>
+	<situation>
+		<name>ExtremePoverty</name>
+		<val>0.00362110</val>
+		<active>0</active>
+		<history>0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.004,0.005,0.004,0.003,</history>
+		<activehistory>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,</activehistory>
+	</situation>
 </situations>
 <dilemmas>
-<dilemma>
-<name>AirportExpansion</name>
-<blocked>0</blocked>
-</dilemma>
+	<dilemma>
+		<name>AirportExpansion</name>
+		<blocked>0</blocked>
+	</dilemma>
 <dilemma>
 <name>AppointAmbassador</name>
 <blocked>0</blocked>
@@ -43235,17 +43235,17 @@
 <name>Popstar</name>
 <blocked>0</blocked>
 </dilemma>
-<dilemma>
-<name>Powerlines</name>
-<blocked>0</blocked>
-</dilemma>
+	<dilemma>
+		<name>Powerlines</name>
+		<blocked>0</blocked>
+	</dilemma>
 </dilemmas>
 <simvalues>
-<simvalue>
-<name>Health</name>
-<value>0.12631482</value>
-<history>0.126,0.128,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.128,0.128,0.129,0.130,0.129,0.136,0.143,0.148,0.150,0.156,0.168,0.158,0.165,0.000,0.000,0.000,</history>
-</simvalue>
+	<simvalue>
+		<name>Health</name>
+		<value>0.12631482</value>
+		<history>0.126,0.128,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.127,0.128,0.128,0.129,0.130,0.129,0.136,0.143,0.148,0.150,0.156,0.168,0.158,0.165,0.000,0.000,0.000,</history>
+	</simvalue>
 <simvalue>
 <name>Education</name>
 <value>0.68938333</value>
@@ -43461,23 +43461,23 @@
 <value>0.23338199</value>
 <history>0.233,0.233,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.244,0.245,0.245,0.245,0.246,0.246,0.246,0.247,0.248,0.244,0.245,0.161,0.093,</history>
 </simvalue>
-<simvalue>
-<name>IndustrialAutomation</name>
-<value>0.35485464</value>
-<history>0.355,0.353,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,</history>
-</simvalue>
+	<simvalue>
+		<name>IndustrialAutomation</name>
+		<value>0.35485464</value>
+		<history>0.355,0.353,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,0.351,</history>
+	</simvalue>
 </simvalues>
 <votertypes>
-<votertype>
-<name>Socialist</name>
-<value>0.10467491</value>
-<history>0.105,-0.078,-0.107,-0.102,-0.051,-0.084,-0.130,-0.133,-0.086,-0.062,-0.075,-0.129,-0.073,-0.091,-0.118,-0.108,-0.067,-0.092,-0.037,-0.088,-0.106,-0.102,-0.034,-0.053,-0.097,-0.059,-0.084,-0.054,-0.042,-0.121,-0.036,-0.054,-0.098,</history>
-<perc_history>0.537,0.538,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,</perc_history>
-<freqval>-0.12000000</freqval>
-<income>0.00000000</income>
-<cynic>0.00000000</cynic>
-<complacency>0.00000000</complacency>
-</votertype>
+	<votertype>
+		<name>Socialist</name>
+		<value>0.10467491</value>
+		<history>0.105,-0.078,-0.107,-0.102,-0.051,-0.084,-0.130,-0.133,-0.086,-0.062,-0.075,-0.129,-0.073,-0.091,-0.118,-0.108,-0.067,-0.092,-0.037,-0.088,-0.106,-0.102,-0.034,-0.053,-0.097,-0.059,-0.084,-0.054,-0.042,-0.121,-0.036,-0.054,-0.098,</history>
+		<perc_history>0.537,0.538,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,0.541,</perc_history>
+		<freqval>-0.12000000</freqval>
+		<income>0.00000000</income>
+		<cynic>0.00000000</cynic>
+		<complacency>0.00000000</complacency>
+	</votertype>
 <votertype>
 <name>Capitalist</name>
 <value>-0.34650293</value>
@@ -43668,32 +43668,32 @@
 <cynic>0.00000000</cynic>
 <complacency>0.00000000</complacency>
 </votertype>
-<votertype>
-<name>_All_</name>
-<value>-0.21183179</value>
-<history>-0.212,-0.215,-0.200,-0.259,-0.254,-0.219,-0.201,-0.246,-0.215,-0.248,-0.181,-0.207,-0.238,-0.243,-0.168,-0.190,-0.231,-0.189,-0.193,-0.182,-0.236,-0.220,-0.206,-0.264,-0.197,-0.191,-0.208,-0.197,-0.177,-0.185,-0.239,-0.254,-0.205,</history>
-<perc_history>1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,</perc_history>
-<freqval>0.00000000</freqval>
-<income>0.00000000</income>
-<cynic>0.00000000</cynic>
-<complacency>0.00000000</complacency>
-</votertype>
+	<votertype>
+		<name>_All_</name>
+		<value>-0.21183179</value>
+		<history>-0.212,-0.215,-0.200,-0.259,-0.254,-0.219,-0.201,-0.246,-0.215,-0.248,-0.181,-0.207,-0.238,-0.243,-0.168,-0.190,-0.231,-0.189,-0.193,-0.182,-0.236,-0.220,-0.206,-0.264,-0.197,-0.191,-0.208,-0.197,-0.177,-0.185,-0.239,-0.254,-0.205,</history>
+		<perc_history>1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,1.000,</perc_history>
+		<freqval>0.00000000</freqval>
+		<income>0.00000000</income>
+		<cynic>0.00000000</cynic>
+		<complacency>0.00000000</complacency>
+	</votertype>
 </votertypes>
 <grudges>
-<grudge>
-<name></name>
-<guiname>Anna Brooks</guiname>
-<decay>1.00000000</decay>
-<value>0.05000000</value>
-<target>Environmentalist</target>
-</grudge>
-<grudge>
-<name></name>
-<guiname>Anna Brooks</guiname>
-<decay>1.00000000</decay>
-<value>0.05000000</value>
-<target>Patriot</target>
-</grudge>
+	<grudge>
+		<name></name>
+		<guiname>Anna Brooks</guiname>
+		<decay>1.00000000</decay>
+		<value>0.05000000</value>
+		<target>Environmentalist</target>
+	</grudge>
+	<grudge>
+		<name></name>
+		<guiname>Anna Brooks</guiname>
+		<decay>1.00000000</decay>
+		<value>0.05000000</value>
+		<target>Patriot</target>
+	</grudge>
 <grudge>
 <name></name>
 <guiname>Dorothy Morris</guiname>
@@ -43855,26 +43855,26 @@
 <value>-0.07200000</value>
 <target>SelfEmployed</target>
 </grudge>
-<grudge>
-<name>DebtProtectionLaw</name>
-<guiname>Debt Protection Law</guiname>
-<decay>0.89999998</decay>
-<value>-0.05400000</value>
-<target>Capitalist</target>
-</grudge>
+	<grudge>
+		<name>DebtProtectionLaw</name>
+		<guiname>Debt Protection Law</guiname>
+		<decay>0.89999998</decay>
+		<value>-0.05400000</value>
+		<target>Capitalist</target>
+	</grudge>
 </grudges>
 <events>
-<turnssincelastevent>2</turnssincelastevent>
-<event>
-<name>CreditCrunch</name>
-<Value>0.02381287</Value>
-<triggered>0</triggered>
-</event>
-<event>
-<name>MortgageRateRise</name>
-<Value>0.38456488</Value>
-<triggered>0</triggered>
-</event>
+	<turnssincelastevent>2</turnssincelastevent>
+	<event>
+		<name>CreditCrunch</name>
+		<Value>0.02381287</Value>
+		<triggered>0</triggered>
+	</event>
+	<event>
+		<name>MortgageRateRise</name>
+		<Value>0.38456488</Value>
+		<triggered>0</triggered>
+	</event>
 <event>
 <name>OilTankerSunk</name>
 <Value>0.02114868</Value>
@@ -44325,73 +44325,73 @@
 <Value>0.00000000</Value>
 <triggered>0</triggered>
 </event>
-<event>
-<name>LoseDonor</name>
-<Value>0.00000000</Value>
-<triggered>0</triggered>
-</event>
+	<event>
+		<name>LoseDonor</name>
+		<Value>0.00000000</Value>
+		<triggered>0</triggered>
+	</event>
 </events>
 <finances>
-<0>7061.37500000</0>
-<1>1324165.75000000</1>
-<2>1331227.12500000</2>
-<3>0.03177778</3>
-<4>25841.73437500</4>
-<5>3252805.50000000</5>
-<6>0.91772252</6>
-<incomehist>1331227.125,1253873.375,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,</incomehist>
-<exphist>1324165.750,1270737.125,1275638.250,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,</exphist>
-<debthist>3252805.500,3174800.500,3147291.750,3119783.000,3092274.500,3064766.000,3037257.500,3009749.000,2982240.500,2954732.000,2927223.500,2899715.000,2872206.500,2844698.000,2817189.500,2789681.000,2762172.500,2734664.000,2707155.500,2679647.000,</debthist>
-<inthist>0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,</inthist>
-<creditrating>3</creditrating>
-<turns_since_credit>1</turns_since_credit>
+	<0>7061.37500000</0> <!-- surplus -->
+	<1>1324165.75000000</1> <!-- expenditure -->
+	<2>1331227.12500000</2> <!-- income -->
+	<3>0.03177778</3> <!-- interest rate -->
+	<4>25841.73437500</4> <!-- credit rating??? -->
+	<5>3252805.50000000</5> <!-- debt -->
+	<6>0.91772252</6> <!-- debt/GDP ratio -->
+	<incomehist>1331227.125,1253873.375,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,1248346.500,</incomehist>
+	<exphist>1324165.750,1270737.125,1275638.250,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,1275855.125,</exphist>
+	<debthist>3252805.500,3174800.500,3147291.750,3119783.000,3092274.500,3064766.000,3037257.500,3009749.000,2982240.500,2954732.000,2927223.500,2899715.000,2872206.500,2844698.000,2817189.500,2789681.000,2762172.500,2734664.000,2707155.500,2679647.000,</debthist>
+	<inthist>0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,0.032,</inthist>
+	<creditrating>3</creditrating>
+	<turns_since_credit>1</turns_since_credit>
 </finances>
 <ministers>
-<minister>
-<fullname>Adam Perez</fullname>
-<exp>0.02620850</exp>
-<sym1>0</sym1>
-<sym2>15</sym2>
-<job>none</job>
-<gender>0</gender>
-<loyalty>0.71956789</loyalty>
-<volatility>0.94081116</volatility>
-<status>0</status>
-<suits>
-<suit>
-<grp>TAX</grp>
-<val>0.74523926</val>
-</suit>
-<suit>
-<grp>TRANSPORT</grp>
-<val>0.60891724</val>
-</suit>
-<suit>
-<grp>FOREIGNPOLICY</grp>
-<val>0.46643066</val>
-</suit>
-<suit>
-<grp>PUBLICSERVICES</grp>
-<val>0.19140625</val>
-</suit>
-<suit>
-<grp>WELFARE</grp>
-<val>0.12927246</val>
-</suit>
-<suit>
-<grp>ECONOMY</grp>
-<val>0.10778809</val>
-</suit>
-<suit>
-<grp>LAWANDORDER</grp>
-<val>0.04455566</val>
-</suit>
-</suits>
-<value>0.50000000</value>
-<portrait>,19,14,20,255,m_jacket_1.dds,99,99,99,255,m_skin_1.dds,236,165,135,255,m_shirt_1.dds,135,136,202,255,m_tie_1.dds,15,24,33,255,m_face_16.dds,236,165,135,255,m_whites_16.dds,255,255,255,255,m_eyes_16.dds,170,130,133,255,m_hair_17.dds,19,14,20,255,,255,255,255,255,,0,0,0,0,1,957826.dds</portrait>
-<lastmess>0</lastmess>
-<campaign>1.00000000</campaign>
-</minister>
+	<minister>
+		<fullname>Adam Perez</fullname>
+		<exp>0.02620850</exp>
+		<sym1>0</sym1>
+		<sym2>15</sym2>
+		<job>none</job>
+		<gender>0</gender>
+		<loyalty>0.71956789</loyalty>
+		<volatility>0.94081116</volatility>
+		<status>0</status>
+		<suits>
+		<suit>
+		<grp>TAX</grp>
+		<val>0.74523926</val>
+		</suit>
+		<suit>
+		<grp>TRANSPORT</grp>
+		<val>0.60891724</val>
+		</suit>
+		<suit>
+		<grp>FOREIGNPOLICY</grp>
+		<val>0.46643066</val>
+		</suit>
+		<suit>
+		<grp>PUBLICSERVICES</grp>
+		<val>0.19140625</val>
+		</suit>
+		<suit>
+		<grp>WELFARE</grp>
+		<val>0.12927246</val>
+		</suit>
+		<suit>
+		<grp>ECONOMY</grp>
+		<val>0.10778809</val>
+		</suit>
+		<suit>
+		<grp>LAWANDORDER</grp>
+		<val>0.04455566</val>
+		</suit>
+		</suits>
+		<value>0.50000000</value>
+		<portrait>,19,14,20,255,m_jacket_1.dds,99,99,99,255,m_skin_1.dds,236,165,135,255,m_shirt_1.dds,135,136,202,255,m_tie_1.dds,15,24,33,255,m_face_16.dds,236,165,135,255,m_whites_16.dds,255,255,255,255,m_eyes_16.dds,170,130,133,255,m_hair_17.dds,19,14,20,255,,255,255,255,255,,0,0,0,0,1,957826.dds</portrait>
+		<lastmess>0</lastmess>
+		<campaign>1.00000000</campaign>
+	</minister>
 <minister>
 <fullname>Ronald Thomas</fullname>
 <exp>0.15274659</exp>
@@ -45202,75 +45202,75 @@
 <lastmess>0</lastmess>
 <campaign>0.21820068</campaign>
 </minister>
-<minister>
-<fullname>Janet Barnes</fullname>
-<exp>0.36743164</exp>
-<sym1>7</sym1>
-<sym2>19</sym2>
-<job>none</job>
-<gender>1</gender>
-<loyalty>0.70043945</loyalty>
-<volatility>0.43246460</volatility>
-<status>0</status>
-<suits>
-<suit>
-<grp>LAWANDORDER</grp>
-<val>0.85076904</val>
-</suit>
-<suit>
-<grp>WELFARE</grp>
-<val>0.72897339</val>
-</suit>
-<suit>
-<grp>PUBLICSERVICES</grp>
-<val>0.48687744</val>
-</suit>
-<suit>
-<grp>FOREIGNPOLICY</grp>
-<val>0.44073486</val>
-</suit>
-<suit>
-<grp>TRANSPORT</grp>
-<val>0.34149170</val>
-</suit>
-<suit>
-<grp>ECONOMY</grp>
-<val>0.27447510</val>
-</suit>
-<suit>
-<grp>TAX</grp>
-<val>0.24649048</val>
-</suit>
-</suits>
-<value>0.50000000</value>
-<portrait>f_hairback_10.dds,19,14,20,255,f_jacket_9.dds,35,44,111,255,f_skin_9.dds,109,62,34,255,f_shirt_9.dds,180,190,223,255,,255,255,255,255,f_face_5.dds,109,62,34,255,f_whites_5.dds,255,255,255,255,f_eyes_5.dds,161,210,208,255,f_hair_10.dds,19,14,20,255,,255,255,255,255,,255,255,255,255,0,728876.dds</portrait>
-<lastmess>0</lastmess>
-<campaign>-0.36920166</campaign>
-</minister>
+	<minister>
+		<fullname>Janet Barnes</fullname>
+		<exp>0.36743164</exp>
+		<sym1>7</sym1>
+		<sym2>19</sym2>
+		<job>none</job>
+		<gender>1</gender>
+		<loyalty>0.70043945</loyalty>
+		<volatility>0.43246460</volatility>
+		<status>0</status>
+		<suits>
+		<suit>
+		<grp>LAWANDORDER</grp>
+		<val>0.85076904</val>
+		</suit>
+		<suit>
+		<grp>WELFARE</grp>
+		<val>0.72897339</val>
+		</suit>
+		<suit>
+		<grp>PUBLICSERVICES</grp>
+		<val>0.48687744</val>
+		</suit>
+		<suit>
+		<grp>FOREIGNPOLICY</grp>
+		<val>0.44073486</val>
+		</suit>
+		<suit>
+		<grp>TRANSPORT</grp>
+		<val>0.34149170</val>
+		</suit>
+		<suit>
+		<grp>ECONOMY</grp>
+		<val>0.27447510</val>
+		</suit>
+		<suit>
+		<grp>TAX</grp>
+		<val>0.24649048</val>
+		</suit>
+		</suits>
+		<value>0.50000000</value>
+		<portrait>f_hairback_10.dds,19,14,20,255,f_jacket_9.dds,35,44,111,255,f_skin_9.dds,109,62,34,255,f_shirt_9.dds,180,190,223,255,,255,255,255,255,f_face_5.dds,109,62,34,255,f_whites_5.dds,255,255,255,255,f_eyes_5.dds,161,210,208,255,f_hair_10.dds,19,14,20,255,,255,255,255,255,,255,255,255,255,0,728876.dds</portrait>
+		<lastmess>0</lastmess>
+		<campaign>-0.36920166</campaign>
+	</minister>
 </ministers>
 <ministermanager>
-<turnssinceresignation>2</turnssinceresignation>
-<churn>2</churn>
-<spawn>0</spawn>
+	<turnssinceresignation>2</turnssinceresignation>
+	<churn>2</churn>
+	<spawn>0</spawn>
 </ministermanager>
 <election>
-<turnsuntilelection>14</turnsuntilelection>
-<currentterm>0</currentterm>
+	<turnsuntilelection>14</turnsuntilelection>
+	<currentterm>0</currentterm>
 </election>
 <polls>
-<potentialvoterate>0.15650000</potentialvoterate>
-<peakvoterate>0.15650000</peakvoterate>
-<history>0.156500,0.000000,0.057465,0.024781,0.035274,0.054856,0.046934,0.043976,0.044402,0.039932,0.059533,0.025247,0.037448,0.027466,0.039041,0.031692,0.023871,0.036647,0.044696,0.055498,</history>
+	<potentialvoterate>0.15650000</potentialvoterate>
+	<peakvoterate>0.15650000</peakvoterate>
+	<history>0.156500,0.000000,0.057465,0.024781,0.035274,0.054856,0.046934,0.043976,0.044402,0.039932,0.059533,0.025247,0.037448,0.027466,0.039041,0.031692,0.023871,0.036647,0.044696,0.055498,</history>
 </polls>
 <lastattack>0</lastattack>
 <pressuregroups>
-<pressuregroup>
-<name>WildlifeTrust</name>
-<status>2</status>
-<memberslastturn>79</memberslastturn>
-<threat>0.18960001</threat>
-<rawstrength>474.00000000</rawstrength>
-</pressuregroup>
+	<pressuregroup>
+		<name>WildlifeTrust</name>
+		<status>2</status>
+		<memberslastturn>79</memberslastturn>
+		<threat>0.18960001</threat>
+		<rawstrength>474.00000000</rawstrength>
+	</pressuregroup>
 <pressuregroup>
 <name>HeritageSociety</name>
 <status>2</status>
@@ -45426,16 +45426,16 @@
 <8_hist>0.250,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,0.000,</8_hist>
 </simulation>
 <globaleconomy>
-<pos>0.34250000</pos>
-<years>8.00000000</years>
-<intens>0.50000000</intens>
+	<pos>0.34250000</pos>
+	<years>8.00000000</years>
+	<intens>0.50000000</intens>
 </globaleconomy>
 <gameplay>
-<currentturn>2</currentturn>
+	<currentturn>2</currentturn>
 </gameplay>
 <politicalcapital>
-<points>48</points>
-<max>48</max>
+	<points>48</points>
+	<max>48</max>
 </politicalcapital>
 <inherited>
 <ival>
@@ -47612,59 +47612,58 @@
 <manifesto_potential>
 </manifesto_potential>
 <fundraising>
-<player>3.8736,1.9368,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,</player>
-<opponent>20.6739,9.9284,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,</opponent>
-<vacant_timer_0>0</vacant_timer_0>
-<vacant_timer_1>0</vacant_timer_1>
-<vacant_timer_2>0</vacant_timer_2>
-<vacant_timer_3>0</vacant_timer_3>
-<donor>
-<name>Carlos Barnes</name>
-<profile>don_m_2.png</profile>
-<gen>0.84779358</gen>
-<hap>0.54613513</hap>
-<gender>0</gender>
-<sym1>TradeUnionist</sym1>
-<sym2>Retired</sym2>
-</donor>
-<donor>
-<name>Joshua Evans</name>
-<profile>don_m_10.png</profile>
-<gen>0.89653015</gen>
-<hap>0.50455451</hap>
-<gender>0</gender>
-<sym1>Motorist</sym1>
-<sym2>Farmers</sym2>
-</donor>
-<donor>
-<name>David Diaz</name>
-<profile>don_m_9.png</profile>
-<gen>0.60076904</gen>
-<hap>0.55765271</hap>
-<gender>0</gender>
-<sym1>EthnicMinorities</sym1>
-<sym2>StateEmployees</sym2>
-</donor>
-<donor>
-<name>Jennifer Moore</name>
-<profile>don_f_6.png</profile>
-<gen>0.83006287</gen>
-<hap>0.51513499</hap>
-<gender>1</gender>
-<sym1>Conservatives</sym1>
-<sym2>Religious</sym2>
-</donor>
-<playerdonor>3.87368989</playerdonor>
-<opponentdonor>3.66000009</opponentdonor>
+	<player>3.8736,1.9368,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,</player>
+	<opponent>20.6739,9.9284,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,</opponent>
+	<vacant_timer_0>0</vacant_timer_0>
+	<vacant_timer_1>0</vacant_timer_1>
+	<vacant_timer_2>0</vacant_timer_2>
+	<vacant_timer_3>0</vacant_timer_3>
+	<donor>
+	<name>Carlos Barnes</name>
+	<profile>don_m_2.png</profile>
+	<gen>0.84779358</gen>
+	<hap>0.54613513</hap>
+	<gender>0</gender>
+	<sym1>TradeUnionist</sym1>
+	<sym2>Retired</sym2>
+	</donor>
+	<donor>
+	<name>Joshua Evans</name>
+	<profile>don_m_10.png</profile>
+	<gen>0.89653015</gen>
+	<hap>0.50455451</hap>
+	<gender>0</gender>
+	<sym1>Motorist</sym1>
+	<sym2>Farmers</sym2>
+	</donor>
+	<donor>
+	<name>David Diaz</name>
+	<profile>don_m_9.png</profile>
+	<gen>0.60076904</gen>
+	<hap>0.55765271</hap>
+	<gender>0</gender>
+	<sym1>EthnicMinorities</sym1>
+	<sym2>StateEmployees</sym2>
+	</donor>
+	<donor>
+	<name>Jennifer Moore</name>
+	<profile>don_f_6.png</profile>
+	<gen>0.83006287</gen>
+	<hap>0.51513499</hap>
+	<gender>1</gender>
+	<sym1>Conservatives</sym1>
+	<sym2>Religious</sym2>
+	</donor>
+	<playerdonor>3.87368989</playerdonor>
+	<opponentdonor>3.66000009</opponentdonor>
 </fundraising>
 <perceptions>
-<0>0.50000000</0>
-<history>0.500,0.500,0.500,0.517,0.489,0.518,0.499,0.520,0.496,0.484,0.482,0.502,0.514,0.518,0.498,0.502,0.503,0.510,0.489,0.515,0.490,0.485,0.517,0.517,0.504,0.500,0.508,0.516,0.498,0.489,0.505,0.503,0.493,</history>
-<1>0.63793385</1>
-<history>0.638,0.636,0.635,0.505,0.508,0.481,0.505,0.507,0.496,0.517,0.518,0.482,0.509,0.508,0.519,0.515,0.506,0.509,0.484,0.496,0.495,0.489,0.501,0.501,0.504,0.488,0.501,0.509,0.511,0.499,0.488,0.509,0.501,</history>
-<2>0.49680820</2>
-<history>0.497,0.497,0.497,0.487,0.505,0.483,0.490,0.498,0.507,0.495,0.509,0.486,0.495,0.504,0.503,0.488,0.481,0.516,0.518,0.504,0.519,0.503,0.484,0.505,0.485,0.486,0.499,0.481,0.498,0.496,0.489,0.504,0.513,</history>
+	<0>0.50000000</0>
+	<history>0.500,0.500,0.500,0.517,0.489,0.518,0.499,0.520,0.496,0.484,0.482,0.502,0.514,0.518,0.498,0.502,0.503,0.510,0.489,0.515,0.490,0.485,0.517,0.517,0.504,0.500,0.508,0.516,0.498,0.489,0.505,0.503,0.493,</history>
+	<1>0.63793385</1>
+	<history>0.638,0.636,0.635,0.505,0.508,0.481,0.505,0.507,0.496,0.517,0.518,0.482,0.509,0.508,0.519,0.515,0.506,0.509,0.484,0.496,0.495,0.489,0.501,0.501,0.504,0.488,0.501,0.509,0.511,0.499,0.488,0.509,0.501,</history>
+	<2>0.49680820</2>
+	<history>0.497,0.497,0.497,0.487,0.505,0.483,0.490,0.498,0.507,0.495,0.509,0.486,0.495,0.504,0.503,0.488,0.481,0.516,0.518,0.504,0.519,0.503,0.484,0.505,0.485,0.486,0.499,0.481,0.498,0.496,0.489,0.504,0.513,</history>
 </perceptions>
-<spin>
-</spin>
+<spin></spin>
 </xml>
